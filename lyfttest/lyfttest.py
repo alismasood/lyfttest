@@ -24,15 +24,15 @@ import os
 from flask import Flask, request, json, jsonify
 
 # Flask app initialization
-app = Flask(__name__)
-app.config.from_object(__name__)
+app = Flask(__name__) # create application instance
+app.config.from_object(__name__) # load config from this file
 
+# Load default config and override config from an environment variable
 app.config.update(dict(
     SECRET_KEY='development key',
     USERNAME='admin',
     PASSWORD='default'
 ))
-
 app.config.from_envvar('LYFTTEST_SETTINGS',silent=True)
 
 # Routes
@@ -50,11 +50,16 @@ def test():
     # Check json object content
     jsoncontent = request.json
     if "x" not in jsoncontent or "y" not in jsoncontent:
-        return "Error: no x or y parameter passed in JSON object."
+        return "Error: x or y parameter were not found in the passed JSON object."
+    
+    # Check x and y parameter types
+    x = jsoncontent["x"]
+    y = jsoncontent["y"]
+    if type(x) is not int or type(y) is not int:
+        return "Error: x and y parameters passed in the JSON object must be of type int." 
+    
     # All checks passed: return sum
     else:
-        x = content["x"]
-        y = content["y"]
         return jsonify({"sum":x+y})
 
     
