@@ -2,12 +2,27 @@
 This project is a very small web app built for the Lyft Software Engineer Apprenticeship application, to fulfill the following functional specification:
 
 ```
- If you don’t have a current code sample you can share, please write a small web application in one of the above languages (Python/Ruby/Node). It only needs to accept a POST request to the route “/test” which accepts two arguments “x” and “y” and returns a JSON object {“sum”: x+y}. To see expected behavior you can test against a current working example with the command: curl -X POST https://lyft-interview-test.herokuapp.com/test --data '{"x": 4, "y": 2}' -H 'Content-Type: application/json'
+If you don’t have a current code sample you can share, please write a small web application in
+one of the above languages (Python/Ruby/Node). It only needs to accept a POST request to the route
+“/test” which accepts two arguments “x” and “y” and returns a JSON object {“sum”: x+y}. To see
+expected behavior you can test against a current working example with the command: curl -X POST 
+https://lyft-interview-test.herokuapp.com/test --data '{"x": 4, "y": 2}' \ 
+-H 'Content-Type: application/json'
 ```
+
+This application was written with heavy help from the following tutorials:
+1. The official Flask Tutorial by Armin Ronacher
+   http://flask.pocoo.org/docs/0.12/tutorial/`
+
+2. Implementing a RESTful Web API with Python & Flask by Luis Rei
+   http://blog.luisrei.com/
+
+3. Flask: Parsing JSON data
+   https://techtutorialsx.com/2017/01/07/flask-parsing-json-data/   
 
 ## Installing / Getting started
 
-The following instructions use syntax required to install on a Fedora 26 machine. To install and run this program on a different linux distribution, replace dnf with your respective package manager.
+The following instructions are written for a system running Fedora 26. To install and run this program on a different linux distribution, replace dnf with your respective package manager.
 
 ### 1. Download this project.
 Fork or download this project.
@@ -32,7 +47,7 @@ Finally, install lyfttest by running the following command from the root directo
 pip install
 ```
 
-The lyfttest app is now installed in your virtualenv
+The lyfttest app should now be installed in your virtual environment.
 
 ## Running
 Once installed, you can run the application using these commands:
@@ -44,7 +59,8 @@ flask run
 
 Test the application by running the following command in terminal:
 ```shell
-curl -X POST https://lyft-inter    view-test.herokuapp.com/test --data '{"x": 4, "y": 2}' -H 'Content-Type: application/json'
+curl -X POST https://lyft-interview-test.herokuapp.com/test --data '{"x": 4, "y": 2}' \
+-H 'Content-Type: application/json'
 ```
 
 ## Licensing
