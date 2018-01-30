@@ -12,7 +12,7 @@ https://lyft-interview-test.herokuapp.com/test --data '{"x": 4, "y": 2}' \
 
 This application was written with heavy help from the following tutorials:
 1. The official Flask Tutorial by Armin Ronacher
-   http://flask.pocoo.org/docs/0.12/tutorial/`
+   http://flask.pocoo.org/docs/0.12/tutorial/
 
 2. Implementing a RESTful Web API with Python & Flask by Luis Rei
    http://blog.luisrei.com/
