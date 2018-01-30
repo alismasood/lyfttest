@@ -57,7 +57,7 @@ flask run
 
 Test the application by running the following command in terminal:
 ```shell
-curl -X POST https://lyft-interview-test.herokuapp.com/test --data '{"x": 4, "y": 2}' \
+curl -X POST http://127.0.0.1:5000/test --data '{"x": 4, "y": 2}' \
 -H 'Content-Type: application/json'
 ```
 
