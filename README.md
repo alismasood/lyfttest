@@ -24,33 +24,31 @@ This application was written with heavy help from the following tutorials:
 
 The following instructions are written for a system running Fedora 26. To install and run this program on a different linux distribution, replace dnf with your respective package manager.
 
-### 1. Download this project.
-Fork or download this project.
+1. Download this project.
 
-### 2. Install Dependencies 
-If you don't have pip and/or virtualenv, install them with the following commands:
+2. If you don't have pip and/or virtualenv, install them with the following commands:
 ```shell
 sudo dnf install python-pip
 sudo pip install virtualenv
 ```
-Setup your virtual environment with the following command, replacing [venv name] with whatever you would like to name your virtual environment.
+3. Setup your virtual environment with the following command, replacing [venv name] with whatever you would like to name your virtual environment.
 ```shell
 sudo virtualenv [venv name]
 ```
-Install the Flask with the following commands, again replacing [vnev name] with your chosen virtual environment name.
+4. Install the Flask with the following commands, again replacing [vnev name] with your chosen virtual environment name.
 ```shell
 source [venv name]/bin/activate
 sudo pip install Flask
 ```
-Finally, install lyfttest by running the following command from the root directory of the project:
+5. Finally, install lyfttest by running the following command from the root directory of the project:
 ```shell
 pip install
 ```
 
 The lyfttest app should now be installed in your virtual environment.
 
-## Running
-Once installed, you can run the application using these commands:
+## Running the app
+Once installed, you can run the application using the following commands:
 ```shell
 export FLASK_APP=lyfttest
 export FLASK_DEBUG=true
